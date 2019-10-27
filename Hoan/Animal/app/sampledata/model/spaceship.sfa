@@ -1,0 +1,106 @@
+{
+  animations: [
+    {
+      clips: [
+        {
+          name: 'Intergalactic Spaceship|CircleAction.004',
+        },
+        {
+          name: 'Intergalactic Spaceship|CircleAction.005',
+        },
+        {
+          name: 'Intergalactic Spaceship|RetopoGroup2Action.002',
+        },
+        {
+          name: 'Intergalactic Spaceship|SphereAction',
+        },
+        {
+          name: 'Intergalactic Spaceship|SphereAction.002',
+        },
+        {
+          name: 'Intergalactic Spaceship|SphereAction.003',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.013',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.014',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.015',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.016',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.017',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.018',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.019',
+        },
+        {
+          name: 'Intergalactic Spaceship|Torus.004Action.020',
+        },
+      ],
+      path: 'sampledata/model/spaceship.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Material',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/model/spaceship.fbx',
+    name: 'spaceship',
+    recenter: 'root',
+    scale: 0.28671999999999997,
+  },
+  version: '0.54:2',
+}
