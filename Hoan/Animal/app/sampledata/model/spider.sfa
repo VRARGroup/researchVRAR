@@ -1,0 +1,260 @@
+{
+  animations: [
+    {
+      clips: [
+        {
+          name: 'Spider_Armature|Attack',
+        },
+        {
+          name: 'Spider_Armature|die',
+        },
+        {
+          name: 'Spider_Armature|die 2',
+        },
+        {
+          name: 'Spider_Armature|fall',
+        },
+        {
+          name: 'Spider_Armature|Jump',
+        },
+        {
+          name: 'Spider_Armature|normal',
+        },
+        {
+          name: 'Spider_Armature|run_ani_back',
+        },
+        {
+          name: 'Spider_Armature|run_ani_vor',
+        },
+        {
+          name: 'Spider_Armature|run_left',
+        },
+        {
+          name: 'Spider_Armature|run_right',
+        },
+        {
+          name: 'Spider_Armature|walk_ani_back',
+        },
+        {
+          name: 'Spider_Armature|walk_ani_vor',
+        },
+        {
+          name: 'Spider_Armature|walk_left',
+        },
+        {
+          name: 'Spider_Armature|walk_right',
+        },
+        {
+          name: 'Spider_Armature|warte_pose',
+        },
+      ],
+      path: 'sampledata/model/spider.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Box',
+      parameters: [
+        {
+          baseColor: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Spider_Eye',
+      parameters: [
+        {
+          baseColor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Spider',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Spider_teeth',
+      parameters: [
+        {
+          baseColor: [
+            0.41320400000000002,
+            0.31126300000000001,
+            0.221805,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Spider_Fur',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/model/spider.fbx',
+    name: 'spider',
+    recenter: 'root',
+  },
+  version: '0.54:2',
+}

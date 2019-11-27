@@ -38,7 +38,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.12.0'
 }
@@ -48,3 +48,9 @@ sceneform.asset('sampledata/model/spaceship.fbx',
         'default',
         'sampledata/model/spaceship.sfa',
         'src/main/res/raw/spaceship')
+
+
+sceneform.asset('sampledata/model/spider.fbx',
+        'default',
+        'sampledata/model/spider.sfa',
+        'src/main/res/raw/spider')
