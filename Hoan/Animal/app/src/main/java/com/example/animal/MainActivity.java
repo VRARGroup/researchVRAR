@@ -32,6 +32,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 import static android.widget.Toast.LENGTH_SHORT;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     final int REQUEST_CODE_SPEECH_INPUT = 199;
     ImageButton btnkey,btncam,btnspeak;
     EditText txt;
+    HitResult hit;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,47 +60,62 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btncam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(txt.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Chưa có dữ liệu", LENGTH_SHORT).show();
-                }
-                else {
-                    int resID = getResources().getIdentifier(replace(txt.getText().toString()), "raw", getPackageName());
-                    if(resID==0)
-                    {
-                        Toast.makeText(MainActivity.this, "Dữ liệu không tồn tại"+replace(txt.getText().toString()), LENGTH_SHORT).show();
-                    }
-                    else {
-                        setupModel(resID);
-                        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
-                            @Override
-                            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-                                Anchor anchor = hitResult.createAnchor();
-                                AnchorNode anchorNode= new AnchorNode(anchor);
-                                anchorNode.setParent(arFragment.getArSceneView().getScene());
-                                createModel(anchorNode);
-                            }
 
-
-                        });
-
-                    }
-                }
-
-            }
-        });
+//        btncam.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(txt.getText().toString().isEmpty()) {
+//                    Toast.makeText(MainActivity.this, "Chưa có dữ liệu", LENGTH_SHORT).show();
+//                }
+//                else {
+//                    int resID = getResources().getIdentifier(replace(txt.getText().toString()), "raw", getPackageName());
+//                    if(resID==0)
+//                    {
+//                        Toast.makeText(MainActivity.this, "Dữ liệu không tồn tại"+replace(txt.getText().toString()), LENGTH_SHORT).show();
+//                    }
+//                    else {
+//                        setupModel(resID);
+//                        arFragment.getArSceneView().clearAnimation();
+//                        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+//                            @Override
+//                            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+//                                hit=hitResult;
+////                                Anchor anchor = hitResult.createAnchor();
+////                                AnchorNode anchorNode= new AnchorNode(anchor);
+////                                anchorNode.setParent(arFragment.getArSceneView().getScene());
+////                                createModel(anchorNode);
+//                            }
+//
+//
+//                        });
+//
+//                    }
+//                }
+//
+//            }
+//        });
         //check camera
         if(checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},1);
         }
 
         arFragment = (ArFragment)getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+        arFragment.getArSceneView().clearAnimation();
+        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+            @Override
+            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                hit=hitResult;
+//                                Anchor anchor = hitResult.createAnchor();
+//                                AnchorNode anchorNode= new AnchorNode(anchor);
+//                                anchorNode.setParent(arFragment.getArSceneView().getScene());
+//                                createModel(anchorNode);
+            }
+
+        });
 
 
 
-    }
+        }
 
     private void setupModel(int id) {
         ModelRenderable.builder()
@@ -126,10 +143,38 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Say something");
 
         try {
-            startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+            try {
+                startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
+                arFragment.getArSceneView().clearAnimation();
+                Random rd = new Random();
+                Anchor anchor = hit.createAnchor();
+                AnchorNode anchorNode = new AnchorNode(anchor);
+                anchorNode.setParent(arFragment.getArSceneView().getScene());
+                createModel(anchorNode);
+
+            } catch (Exception e) {
+                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+
         }
+        catch (Exception g)
+        {
+
+        }
+
+
+
+        int resID = getResources().getIdentifier(replace(txt.getText().toString()), "raw", getPackageName());
+        if(resID>0) {
+            setupModel(resID);
+                   }
+        else
+        {
+            Toast.makeText(this,"chua co du lieu",LENGTH_SHORT).show();
+        }
+
+
     }
 
     @Override
@@ -139,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
             case REQUEST_CODE_SPEECH_INPUT: {
                 if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
                     Log.d("SDV", results.get(0));
 
                     txt.setText(results.get(0));
