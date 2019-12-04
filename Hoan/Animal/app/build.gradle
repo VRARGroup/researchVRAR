@@ -59,3 +59,38 @@ sceneform.asset('sampledata/model/tiger.FBX',
         'default',
         'sampledata/model/tiger.sfa',
         'src/main/res/raw/tiger')
+
+sceneform.asset('sampledata/model/noel.obj',
+        'default',
+        'sampledata/model/noel.sfa',
+        'src/main/res/raw/noel')
+
+sceneform.asset('sampledata/model/khunglong.fbx',
+        'default',
+        'sampledata/model/khunglong.sfa',
+        'src/main/res/raw/khunglong')
+
+sceneform.asset('sampledata/model/dog.fbx',
+        'default',
+        'sampledata/model/dog.sfa',
+        'src/main/res/raw/dog')
+
+sceneform.asset('sampledata/model/robot.FBX',
+        'default',
+        'sampledata/model/robot.sfa',
+        'src/main/assets/robot')
+
+sceneform.asset('sampledata/model/robot.FBX',
+        'default',
+        'sampledata/model/robot.sfa',
+        'src/main/res/raw/robot')
+
+sceneform.asset('sampledata/model/bird.fbx',
+        'default',
+        'sampledata/model/bird.sfa',
+        'src/main/assets/bird')
+
+sceneform.asset('sampledata/model/bird.fbx',
+        'default',
+        'sampledata/model/bird.sfa',
+        'src/main/res/raw/bird')

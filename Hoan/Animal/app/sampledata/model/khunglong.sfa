@@ -1,0 +1,73 @@
+{
+  animations: [
+    {
+      clips: [
+        {
+          name: 'CINEMA_4D_Main',
+        },
+      ],
+      path: 'sampledata/model/khunglong.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Mat_0',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: '755688691_2048x2048',
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/model/khunglong.fbx',
+    name: 'khunglong',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      file: 'sampledata/model\\khunglong.fbm\\755688691_2048x2048.png',
+      name: '755688691_2048x2048',
+      pipeline_name: 'khunglong.fbm\\755688691_2048x2048.png',
+    },
+  ],
+  version: '0.54:2',
+}
