@@ -1,0 +1,63 @@
+{
+  materials: [
+    {
+      name: 'Material #25',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: 'tiger',
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/model/tiger.FBX',
+    name: 'tiger',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      file: 'sampledata/model\\tiger.fbm\\tiger.jpg',
+      name: 'tiger',
+      pipeline_name: 'tiger.fbm\\tiger.jpg',
+    },
+  ],
+  version: '0.54:2',
+}

@@ -12,10 +12,7 @@
        android:layout_height="wrap_content"
        android:layout_alignParentStart="true"
        android:layout_alignParentTop="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="-3dp"
-       android:layout_marginTop="38dp"
-       android:layout_marginEnd="3dp"/>
+       android:layout_alignParentEnd="true"/>
 
    <fragment
        android:id="@+id/ux_fragment"
@@ -38,22 +35,6 @@
        android:layout_alignParentEnd="true"
        android:layout_alignParentBottom="true"
        android:gravity="center">
-
-      <ImageButton
-          android:id="@+id/ibtn1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="15dp"
-          android:background="@drawable/keyboard" />
-
-      <ImageButton
-          android:id="@+id/ibtn2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="15dp"
-          android:background="@drawable/camera" />
 
       <ImageButton
           android:id="@+id/ibtn3"

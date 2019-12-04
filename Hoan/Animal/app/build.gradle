@@ -54,3 +54,8 @@ sceneform.asset('sampledata/model/spider.fbx',
         'default',
         'sampledata/model/spider.sfa',
         'src/main/res/raw/spider')
+
+sceneform.asset('sampledata/model/tiger.FBX',
+        'default',
+        'sampledata/model/tiger.sfa',
+        'src/main/res/raw/tiger')
