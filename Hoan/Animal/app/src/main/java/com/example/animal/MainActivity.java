@@ -154,9 +154,7 @@ public class MainActivity extends AppCompatActivity {
             case REQUEST_CODE_SPEECH_INPUT: {
                 if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
                     Log.d("SDV", results.get(0));
-
                     txt.setText(results.get(0));
                 }
                 break;
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
         //result=result+""+name;
         //Replacing all non-alphanumeric characters with "_"
         //result = result.replaceAll("[^a-zA-Z0-9]+", "");
-        return result;
+        return result.toLowerCase();
 
     }
 }

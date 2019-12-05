@@ -85,10 +85,6 @@ sceneform.asset('sampledata/model/robot.FBX',
         'sampledata/model/robot.sfa',
         'src/main/res/raw/robot')
 
-sceneform.asset('sampledata/model/bird.fbx',
-        'default',
-        'sampledata/model/bird.sfa',
-        'src/main/assets/bird')
 
 sceneform.asset('sampledata/model/bird.fbx',
         'default',
