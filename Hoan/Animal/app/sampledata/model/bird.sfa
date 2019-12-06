@@ -1,6 +1,11 @@
 {
   animations: [
     {
+      clips: [
+        {
+          name: 'CINEMA_4D_Main',
+        },
+      ],
       path: 'sampledata/model/bird.fbx',
     },
   ],
@@ -47,7 +52,6 @@
   model: {
     attributes: [
       'Position',
-      'Color',
       'TexCoord',
       'Orientation',
       'BoneIndices',
@@ -57,18 +61,13 @@
     file: 'sampledata/model/bird.fbx',
     name: 'bird',
     recenter: 'root',
-    scale: 12.673686,
+    scale: 0.0038,
   },
   samplers: [
     {
       file: 'sampledata/model\\bird.fbm\\291.png',
       name: '291',
       pipeline_name: 'bird.fbm\\291.png',
-    },
-    {
-      file: 'sampledata/model\\bird.fbm\\295.png',
-      name: '295',
-      pipeline_name: 'bird.fbm\\295.png',
     },
   ],
   version: '0.54:2',
