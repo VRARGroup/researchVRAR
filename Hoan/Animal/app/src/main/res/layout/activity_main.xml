@@ -22,8 +22,21 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_alignParentTop="true"
+       android:layout_marginStart="20dp"
        android:layout_toEndOf="@+id/edit1"
        android:background="@drawable/microphone" />
+
+   <Button
+       android:id="@+id/btn4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginStart="20dp"
+       android:layout_marginEnd="10dp"
+       android:layout_toEndOf="@+id/ibtn3"
+       android:background="#009688"
+       android:textColor="#ffff"
+       android:text="Hướng dẫn"/>
 
    <fragment
        android:id="@+id/ux_fragment"

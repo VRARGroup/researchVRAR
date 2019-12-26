@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     final int REQUEST_CODE_SPEECH_INPUT = 199;
     ImageButton btnkey,btncam,btnspeak;
     EditText txt;
+    Button btn;
     int resID;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txt = findViewById(R.id.edit1);
         btnspeak = findViewById(R.id.ibtn3);
+        btn = findViewById(R.id.btn4);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, welcome.class));
+            }
+        });
         arFragment = (ArFragment)getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
         btnspeak.setOnClickListener(new View.OnClickListener() {
             @Override

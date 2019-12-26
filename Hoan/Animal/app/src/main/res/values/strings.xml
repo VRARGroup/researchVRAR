@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Animal</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Bước 1!</string>
+    <string name="slide_1_desc">Hướng camera vào mặt phẳng!</string>
+
+    <string name="slide_2_title">Bước 2!</string>
+    <string name="slide_2_desc">Di chuyển màn hình chậm đều từ trái sang phải để camera bắt mắt phẳng!</string>
+
+    <string name="slide_3_title">Bước 3!</string>
+    <string name="slide_3_desc">Chạm vào màn hình để hiện thị hình ảnh!</string>
+
+    <string name="slide_4_title">Bước 4!</string>
+    <string name="slide_4_desc">Điền tên con vật khác vào!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
 </resources>
