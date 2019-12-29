@@ -57,12 +57,7 @@ public class MainActivity extends AppCompatActivity {
         txt = findViewById(R.id.edit1);
         btnspeak = findViewById(R.id.ibtn3);
         btn = findViewById(R.id.btn4);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, welcome.class));
-            }
-        });
+
         arFragment = (ArFragment)getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
         btnspeak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +83,15 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},1);
         }
 
-
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String d="vn";
+                Intent intent = new Intent(MainActivity.this, welcome.class);
+                intent.putExtra("id", d);
+                startActivity(intent);
+            }
+        });
 
        txt.addTextChangedListener(new TextWatcher() {
            @Override
